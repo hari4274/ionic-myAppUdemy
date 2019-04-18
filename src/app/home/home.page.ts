@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(public alertCtrl: AlertController){
+  constructor(public alertCtrl: AlertController, public loadingCtrl: LoadingController){
 
   }
 
@@ -21,6 +21,17 @@ export class HomePage {
     });
 
     await alert.present();
+  }
+
+  async openLoading()
+  {
+    const loading = await this.loadingCtrl.create({
+      message: 'Hello i am your message',
+      spinner: 'crescent',
+      duration: 2000
+    });
+
+    await loading.present();
   }
 
 }
