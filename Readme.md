@@ -41,6 +41,10 @@ export PATH=$PATH:/opt/gradle/gradle-5.2.1/bin`
 
 `ionic cordova emulate android`
 
-Usefull Links:
+`ionic cordova resources`
+
+# Usefull Links:
 
 Icons : https://ionicons.com/
+
+Icons Generator: https://pgicons.abiro.com/
