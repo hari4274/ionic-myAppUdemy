@@ -20,6 +20,14 @@ Training In Ionic4
 
 `ionic cordova build android`
 
+`cat > ~/.bash_profile`
+`export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/opt/gradle/gradle-5.2.1/bin`
+
 `source ~/.bash_profile`
 
 `echo $PATH`
