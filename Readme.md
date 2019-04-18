@@ -48,3 +48,5 @@ export PATH=$PATH:/opt/gradle/gradle-5.2.1/bin`
 Icons : https://ionicons.com/
 
 Icons Generator: https://pgicons.abiro.com/
+
+Cors Example In nodeJS : https://ionicframework.com/docs/faq/cors
