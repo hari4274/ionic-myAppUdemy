@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(public alertCtrl: AlertController, public loadingCtrl: LoadingController){
+  constructor(public alertCtrl: AlertController, public loadingCtrl: LoadingController, public toastCtrl: ToastController){
 
   }
 
@@ -26,7 +26,7 @@ export class HomePage {
   async openLoading()
   {
     const loading = await this.loadingCtrl.create({
-      message: 'Hello i am your message',
+      message: 'Hello i am your Loading message',
       spinner: 'crescent',
       duration: 2000
     });
@@ -34,4 +34,13 @@ export class HomePage {
     await loading.present();
   }
 
+  async openToast() {
+    const toast = await this.toastCtrl.create({
+      message: 'Hello i am your toast message',
+      duration: 2000,
+      position: 'top'
+    });
+
+    await toast.present();
+  }
 }
