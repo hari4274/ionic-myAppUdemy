@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { AlertController, LoadingController, ToastController } from '@ionic/angu
 })
 export class HomePage {
 
-  constructor(public alertCtrl: AlertController, public loadingCtrl: LoadingController, public toastCtrl: ToastController){
+  constructor(private router: Router,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public toastCtrl: ToastController){
 
   }
 
@@ -42,5 +43,9 @@ export class HomePage {
     });
 
     await toast.present();
+  }
+
+  openContacts() {
+    this.router.navigate(['/contacts']);
   }
 }

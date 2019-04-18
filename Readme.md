@@ -43,6 +43,12 @@ export PATH=$PATH:/opt/gradle/gradle-5.2.1/bin`
 
 `ionic cordova resources`
 
+`ionic g page <page-name>`
+
+`ionic g c <page-name>/<component-name>`
+
+`ionic g guard auth`
+
 # Usefull Links:
 
 Icons : https://ionicons.com/
